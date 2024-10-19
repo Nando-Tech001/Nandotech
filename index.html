@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANDOTECH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagenes/img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: rgba(255, 0, 0, 0.3);
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            margin: 0;
+            padding-left: 20px;
+        }
+        nav {
+            padding-right: 20px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        nav ul li a:hover {
+            transform: scale(1.2);
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: rgba(68, 68, 68, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            margin: 5px 0;
+        }
+        nav ul li ul li a {
+            padding: 5px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product-card h3 {
+            margin: 10px 0 10px;
+            font-size: 20px;
+        }
+        .product-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 18px;
+        }
+        .product-card:hover {
+            transform: scale(1.20);
+        }
+        .whatsapp-contact {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            width: 180px;
+            background-color: #25d366;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .whatsapp-contact a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .whatsapp-contact img {
+            width: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NANDOTECH</h1>
+        <nav>
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="pago.html">Carrito</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="ofertas.html">Promociones</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="mi cuenta.html">Cuenta</a></li>
+                <li><a href="acerca de.html">nosotros</a></li>
+                <!-- Barra de Búsqueda Actualizada -->
+                <li>
+                    <form id="searchForm" onsubmit="return searchProducts(event)">
+                        <input type="text" id="searchInput" placeholder="Buscar..." style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                        <button type="submit" style="margin-left: 5px; padding: 5px 10px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Buscar</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <p>En NANDOTECH encontrarás los mejores accesorios para dispositivos móviles. Desde protectores de pantalla hasta cargadores, tenemos todo lo que necesitas para cuidar y mejorar tus dispositivos.</p>
+        
+        <div class="products">
+            <a href="protectores.html" class="product-card">
+                <img src="imagenes/protector.jpg" alt="Protectores de Pantalla">
+                <h3>Protectores de Pantalla</h3>
+                <p>$15.000</p>
+            </a>
+            <a href="fundas.html" class="product-card">
+                <img src="imagenes/fundas.jpg" alt="Fundas">
+                <h3>Fundas</h3>
+                <p>$30.000</p>
+            </a>
+            <a href="cargadores.html" class="product-card">
+                <img src="imagenes/cargadores.jpg" alt="Cargadores">
+                <h3>Cargadores</h3>
+                <p>$50.000</p>
+            </a>
+            <a href="auriculares.html" class="product-card">
+                <img src="imagenes/auriculares.jpg" alt="Auriculares">
+                <h3>Auriculares</h3>
+                <p>$150.000</p>
+            </a>
+            <a href="soportes.html" class="product-card">
+                <img src="imagenes/soportes.jpg" alt="Soportes para Móvil">
+                <h3>Soportes para Móvil</h3>
+                <p>$35.000</p>
+            </a>
+            <a href="adaptadores.html" class="product-card">
+                <img src="imagenes/adaptadores.jpg" alt="Adaptadores">
+                <h3>Adaptadores</h3>
+                <p>$15.000</p>
+            </a>
+            <a href="repuestos.html" class="product-card">
+                <img src="imagenes/repuestos.jpg" alt="Repuestos">
+                <h3>Repuestos</h3>
+                <p>$45.000</p>
+            </a>
+            <a href="telefonos.html" class="product-card">
+                <img src="imagenes/telefonos.jpg" alt="Teléfonos Móviles">
+                <h3>Teléfonos Móviles</h3>
+                <p>$800.000</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="whatsapp-contact">
+        <a href="https://wa.me/+573237908553" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Contáctanos en WhatsApp
+        </a>
+    </div>
+    <footer style="background-color: #8f3c3c; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2024 NANDOTECH. Todos los derechos reservados.</p>
+        <p>Para más información legal, consulta nuestros <a href="terminos.html" style="color: #FFD700;">Términos y Condiciones</a> y nuestra <a href="privacidad.html" style="color: #FFD700;">Política de Privacidad</a>.</p>
+        <p>Atención al cliente: <a href="mailto:soporte@nandotech.com" style="color: #FFD700;">soporte@nandotech.com</a></p>
+        <p>Este sitio utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies.</p>
+    </footer>
+    
+    <!-- Script de búsqueda -->
+    <script>
+    function searchProducts(event) {
+        event.preventDefault();
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const productCards = document.querySelectorAll('.product-card');
+        let found = false;
+
+        productCards.forEach(card => {
+            const productName = card.querySelector('h3').textContent.toLowerCase();
+            if (productName.includes(searchTerm)) {
+                card.style.display = 'block';
+                found = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        if (!found) {
+            alert('No se encontraron productos que coincidan con la búsqueda.');
+        }
+
+        return false;
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios - NANDOTECH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagenes/img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .testimonial h3 {
+            margin: 0;
+            color: #333;
+        }
+        .testimonial p {
+            margin: 10px 0;
+        }
+        .testimonial p.author {
+            font-style: italic;
+            color: #666;
+        }
+        .testimonial-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .testimonial-form h2 {
+            margin-top: 0;
+        }
+        .testimonial-form input, .testimonial-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .testimonial-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .testimonial-form button:hover {
+            background-color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Testimonios de Nuestros Clientes</h1>
+    </header>
+    <div class="content">
+        <p>Lee lo que nuestros clientes tienen que decir sobre sus experiencias con nuestros productos.</p>
+
+        <div class="testimonial">
+            <h3>Juan Pérez</h3>
+            <p>“El Smartphone XYZ Pro es simplemente increíble. La duración de la batería y la calidad de la cámara superaron todas mis expectativas. Lo recomiendo totalmente.”</p>
+            <p class="author">Juan Pérez</p>
+        </div>
+
+        <div class="testimonial">
+            <h3>María López</h3>
+            <p>“Compré la Tablet ABC en oferta y no podría estar más feliz. La calidad es excelente y el servicio al cliente fue muy eficiente. ¡Gracias NANDOTECH!”</p>
+            <p class="author">María López</p>
+        </div>
+
+        <div class="testimonial">
+            <h3>Pedro García</h3>
+            <p>“Los accesorios para móviles de NANDOTECH son de primera. Encontré todo lo que necesitaba para mi dispositivo a precios muy razonables. Sin duda, volveré a comprar.”</p>
+            <p class="author">Pedro García</p>
+        </div>
+
+        <div class="testimonial-form">
+            <h2>Déjanos tu Testimonio</h2>
+            <form id="testimonialForm">
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                <textarea id="testimonial" name="testimonial" rows="4" placeholder="Tu testimonio" required></textarea>
+                <button type="submit">Enviar Testimonio</button>
+            </form>
+        </div>
+
+        <button onclick="window.location.href='index.html'">Volver a Inicio</button>
+    </div>
+</body>
+</html>

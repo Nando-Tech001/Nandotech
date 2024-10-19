@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - NANDOTECH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagenes/img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .offer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .offer img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .offer div {
+            text-align: left;
+        }
+        .offer h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .offer p {
+            margin: 10px 0;
+        }
+        .offer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .offer a:hover {
+            text-decoration: underline;
+        }
+        .special-offer {
+            text-align: center;
+            background-color: #fff4e6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .special-offer h2 {
+            margin: 0;
+            color: #d9534f;
+        }
+        .special-offer p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .special-offer button {
+            padding: 10px 20px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .special-offer button:hover {
+            background-color: #c9302c;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ofertas y Promociones</h1>
+    </header>
+    <div class="content">
+        <h2>Ofertas Destacadas</h2>
+        
+        <div class="offer">
+            <img src="imagenes/smartphone-offer.jpg" alt="Oferta Smartphone">
+            <div>
+                <h3>Smartphone XYZ Pro - 30% de Descuento</h3>
+                <p>Aprovecha nuestra oferta especial en el Smartphone XYZ Pro. Obtén un 30% de descuento en tu compra y disfruta de las mejores características a un precio inmejorable. ¡No te lo pierdas!</p>
+                <a href="oferta1.html">Ver oferta</a>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="imagenes/tablet-offer.jpg" alt="Oferta Tablet">
+            <div>
+                <h3>Tablet ABC - ¡Compra 1 y Llévate el 2º a Mitad de Precio!</h3>
+                <p>¡No te pierdas esta promoción en nuestra Tablet ABC! Compra una y obtén la segunda a mitad de precio. Ideal para el hogar o la oficina.</p>
+                <a href="oferta2.html">Ver oferta</a>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="imagenes/accessory-offer.jpg" alt="Oferta Accesorios">
+            <div>
+                <h3>Accesorios para Móviles - 20% de Descuento en Todos los Artículos</h3>
+                <p>Descubre nuestra gama de accesorios para móviles con un 20% de descuento. Desde fundas hasta cargadores, encuentra todo lo que necesitas para tu dispositivo con un gran descuento.</p>
+                <a href="oferta3.html">Ver oferta</a>
+            </div>
+        </div>
+
+        <div class="special-offer">
+            <h2>Oferta Especial del Mes</h2>
+            <p>¡Solo por tiempo limitado! Compra cualquier producto de nuestra tienda online y recibe un 40% de descuento en tu segunda compra. Usa el código PROMO40 en el checkout.</p>
+            <button onclick="window.location.href='oferta-especial.html'">Aprovechar Oferta</button>
+        </div>
+
+        <button onclick="window.location.href='index.html'">Volver a Inicio</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple - iPhones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagenes/img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .phone-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .phone-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .phone-item img {
+            width: 180px; /* Tamaño fijo para todas las imágenes */
+            height: auto;
+            border-radius: 5px;
+        }
+        .phone-item h3 {
+            font-size: 18px;
+        }
+        .phone-item p {
+            color: #666;
+        }
+        .phone-item button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+        .buy-button {
+            background-color: #28a745;
+            margin-right: 5px;
+        }
+        .cart-button {
+            background-color: #121213;
+        }
+        .buy-button:hover {
+            background-color: #218838;
+        }
+        .cart-button:hover {
+            background-color: #030303;
+        }
+        .back-button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #080808;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>iPhones de Apple</h1>
+    </header>
+
+    <div class="container">
+        <div class="phone-list">
+            <div class="phone-item">
+                <img src="imagenes/telefono6.jpg" alt="iPhone 15 Pro Max">
+                <h3>iPhone 15 Pro Max</h3>
+                <p>256 GB - Titanio Natural</p>
+                <p>$6.499.990</p>
+                <button onclick="agregarAlCarrito('iPhone 15 Pro Max', 6499990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono7.jpg" alt="iPhone 15 Pro">
+                <h3>iPhone 15 Pro</h3>
+                <p>128 GB - Titanio Azul</p>
+                <p>$5.499.990</p>
+                <button onclick="agregarAlCarrito('iPhone 15 Pro', 5499990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono8.jpg" alt="iPhone 15 Plus">
+                <h3>iPhone 15 Plus</h3>
+                <p>128 GB - Rosa</p>
+                <p>$4.799.990</p>
+                <button onclick="agregarAlCarrito('iPhone 15 Plus', 4799990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono9.jpg" alt="iPhone 15">
+                <h3>iPhone 15</h3>
+                <p>128 GB - Azul</p>
+                <p>$4.299.990</p>
+                <button onclick="agregarAlCarrito('iPhone 15', 4299990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono10.jpg" alt="iPhone 14 Pro Max">
+                <h3>iPhone 14 Pro Max</h3>
+                <p>256 GB - Morado Oscuro</p>
+                <p>$5.999.990</p>
+                <button onclick="agregarAlCarrito('iPhone 14 Pro Max', 5999990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono11.jpg" alt="iPhone 14 Pro">
+                <h3>iPhone 14 Pro</h3>
+                <p>128 GB - Plata</p>
+                <p>$4.999.990</p>
+                <button onclick="agregarAlCarrito('iPhone 14 Pro', 4999990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono12.jpg" alt="iPhone 14 Plus">
+                <h3>iPhone 14 Plus</h3>
+                <p>128 GB - Amarillo</p>
+                <p>$4.299.990</p>
+                <button onclick="agregarAlCarrito('iPhone 14 Plus', 4299990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono13.jpg" alt="iPhone 14">
+                <h3>iPhone 14</h3>
+                <p>128 GB - Medianoche</p>
+                <p>$3.799.990</p>
+                <button onclick="agregarAlCarrito('iPhone 14', 3799990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono14.jpg" alt="iPhone 13">
+                <h3>iPhone 13</h3>
+                <p>128 GB - Verde</p>
+                <p>$3.299.990</p>
+                <button onclick="agregarAlCarrito('iPhone 13', 3299990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+            <div class="phone-item">
+                <img src="imagenes/telefono15.jpg" alt="iPhone SE (2022)">
+                <h3>iPhone SE (2022)</h3>
+                <p>64 GB - Rojo</p>
+                <p>$2.199.990</p>
+                <button onclick="agregarAlCarrito('iPhone SE (2022)', 2199990)" class="cart-button">Añadir al Carrito</button>
+            </div>
+        </div>
+    <a href="pago.html"class="back-button">Pagar</a>
+        <a href="javascript:history.back()" class="back-button">Volver Atrás</a>
+        <a href="index.html" class="back-button">Volver al Inicio</a>
+    </div>
+    <footer style="background-color: #8f3c3c; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2024 NANDOTECH. Todos los derechos reservados.</p>
+        <p>Para más información legal, consulta nuestros <a href="terminos.html" style="color: #FFD700;">Términos y Condiciones</a> y nuestra <a href="privacidad.html" style="color: #FFD700;">Política de Privacidad</a>.</p>
+        <p>Atención al cliente: <a href="mailto:soporte@nandotech.com" style="color: #FFD700;">soporte@nandotech.com</a></p>
+        <p>Este sitio utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies.</p>
+    </footer>
+    <script>
+        // Función para agregar productos al carrito
+        function agregarAlCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            carrito.push({ nombre, precio });
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert(`${nombre} ha sido añadido al carrito.`);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huawei - Teléfonos</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('imagenes/img.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        margin: 0;
+        font-size: 2em;
+    }
+    .container {
+        padding: 20px;
+        text-align: center;
+    }
+    .phone-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .phone-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+        width: 220px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .phone-item h3 {
+        font-size: 18px;
+    }
+    .phone-item p {
+        color: #666;
+    }
+    .phone-item img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+    .cart-button {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 15px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .cart-button:hover {
+        background-color: #333;
+    }
+    .back-button {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .back-button:hover {
+        background-color: #555;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Teléfonos Huawei</h1>
+</header>
+
+<div class="container">
+    <div class="phone-list">
+        <div class="phone-item">
+            <img src="imagenes/telefono16.jpg" alt="Huawei P60 Pro">
+            <h3>Huawei P60 Pro</h3>
+            <p>256 GB - Dorado</p>
+            <p>$3.999.990</p>
+            <button onclick="agregarAlCarrito('Huawei P60 Pro', 3999990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono17.jpg" alt="Huawei Mate 50 Pro">
+            <h3>Huawei Mate 50 Pro</h3>
+            <p>256 GB - Negro</p>
+            <p>$3.799.990</p>
+            <button onclick="agregarAlCarrito('Huawei Mate 50 Pro', 3799990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono18.jpg" alt="Huawei Nova 11 Pro">
+            <h3>Huawei Nova 11 Pro</h3>
+            <p>128 GB - Verde</p>
+            <p>$2.499.990</p>
+            <button onclick="agregarAlCarrito('Huawei Nova 11 Pro', 2499990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono19.jpg" alt="Huawei Nova 10 Pro">
+            <h3>Huawei Nova 10 Pro</h3>
+            <p>256 GB - Plata</p>
+            <p>$2.299.990</p>
+            <button onclick="agregarAlCarrito('Huawei Nova 10 Pro', 2299990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono20.jpg" alt="Huawei Mate X3">
+            <h3>Huawei Mate X3</h3>
+            <p>512 GB - Púrpura</p>
+            <p>$5.999.990</p>
+            <button onclick="agregarAlCarrito('Huawei Mate X3', 5999990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono21.jpg" alt="Huawei P50 Pro">
+            <h3>Huawei P50 Pro</h3>
+            <p>256 GB - Dorado</p>
+            <p>$3.499.990</p>
+            <button onclick="agregarAlCarrito('Huawei P50 Pro', 3499990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono22.jpg" alt="Huawei Nova Y90">
+            <h3>Huawei Nova Y90</h3>
+            <p>128 GB - Azul</p>
+            <p>$1.299.990</p>
+            <button onclick="agregarAlCarrito('Huawei Nova Y90', 1299990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono23.jpg" alt="Huawei Nova 9 SE">
+            <h3>Huawei Nova 9 SE</h3>
+            <p>128 GB - Cristal</p>
+            <p>$1.199.990</p>
+            <button onclick="agregarAlCarrito('Huawei Nova 9 SE', 1199990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono24.jpg" alt="Huawei Y70">
+            <h3>Huawei Y70</h3>
+            <p>128 GB - Negro</p>
+            <p>$899.990</p>
+            <button onclick="agregarAlCarrito('Huawei Y70', 899990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+        <div class="phone-item">
+            <img src="imagenes/telefono25.jpg" alt="Huawei Y7a">
+            <h3>Huawei Y7a</h3>
+            <p>64 GB - Verde</p>
+            <p>$699.990</p>
+            <button onclick="agregarAlCarrito('Huawei Y7a', 699990)" class="cart-button">Añadir al Carrito</button>
+        </div>
+    </div>
+    <a href="pago.html"class="back-button">Pagar</a>
+    <a href="javascript:history.back()" class="back-button">Volver Atrás</a>
+    <a href="index.html" class="back-button">Volver al Inicio</a>
+</div>
+<footer style="background-color: #8f3c3c; color: #fff; padding: 20px; text-align: center;">
+    <p>© 2024 NANDOTECH. Todos los derechos reservados.</p>
+    <p>Para más información legal, consulta nuestros <a href="terminos.html" style="color: #FFD700;">Términos y Condiciones</a> y nuestra <a href="privacidad.html" style="color: #FFD700;">Política de Privacidad</a>.</p>
+    <p>Atención al cliente: <a href="mailto:soporte@nandotech.com" style="color: #FFD700;">soporte@nandotech.com</a></p>
+    <p>Este sitio utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies.</p>
+</footer>
+<script>
+    // Función para agregar productos al carrito
+    function agregarAlCarrito(nombre, precio) {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.push({ nombre, precio });
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        alert(`${nombre} ha sido añadido al carrito.`);
+    }
+</script>
+
+</body>
+</html>

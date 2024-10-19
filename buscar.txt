@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de Búsqueda - NANDOTECH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .result {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .result h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados de Búsqueda</h1>
+    <div id="resultados">
+        <!-- Los resultados de búsqueda se cargarán aquí -->
+        <!-- Ejemplo de resultado de búsqueda -->
+        <div class="result">
+            <h3>Producto Ejemplo</h3>
+            <p>Descripción del producto ejemplo...</p>
+            <a href="producto.html">Ver Producto</a>
+        </div>
+        <!-- Puedes usar un bucle o plantilla para mostrar resultados dinámicos -->
+    </div>
+
+    <!-- Script de ejemplo para manejar la lógica de búsqueda -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('query');
+
+            if (query) {
+                // Aquí va la lógica para obtener los resultados de búsqueda del backend
+                // Por ejemplo, puedes hacer una petición AJAX a tu servidor para obtener los datos
+                // Este es solo un ejemplo estático
+                document.getElementById('resultados').innerHTML = `
+                    <div class="result">
+                        <h3>Resultados de: "${query}"</h3>
+                        <!-- Resultados simulados -->
+                    </div>`;
+            }
+        });
+    </script>
+</body>
+</html>

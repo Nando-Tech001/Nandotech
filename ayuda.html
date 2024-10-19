@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - NANDOTECH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagenes/img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .navbar li {
+            margin: 0 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .feedback-form {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1da64a;
+        }
+        .comments {
+            margin-top: 20px;
+        }
+        .comment {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .delete-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .delete-btn:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ayuda y Soporte - NANDOTECH</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="javascript:history.back()">Volver Atrás</a></li>
+                            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <h2>¿Cómo utilizar nuestra página web?</h2>
+        <p>Bienvenido a NANDOTECH, tu tienda de accesorios para dispositivos móviles. Aquí encontrarás una amplia gama de productos organizados en diferentes categorías, como protectores de pantalla, fundas, cargadores y más. Para navegar, simplemente selecciona la categoría que te interesa desde el menú principal en la parte superior de la página.</p>
+        <p>Si deseas comprar un producto, simplemente haz clic en el artículo deseado y selecciona la cantidad que deseas añadir al carrito. Luego, sigue las instrucciones para proceder al pago y completar tu compra. ¡Es así de sencillo!</p>
+        <p>En caso de que tengas dudas sobre los productos, puedes consultar la sección de "Contacto" para comunicarte directamente con nosotros por WhatsApp o enviar un mensaje a través del formulario disponible.</p>
+
+        <h2>¿No encuentras lo que buscas?</h2>
+        <p>Si no encuentras la información que necesitas, puedes enviarnos una queja, sugerencia o petición usando el formulario a continuación. Nuestro equipo estará encantado de ayudarte y responder a tus preguntas.</p>
+        
+        <div class="feedback-form">
+            <form id="feedbackForm">
+                <label for="feedback">Escribe tu queja, sugerencia o petición:</label><br>
+                <textarea id="feedback" name="feedback" placeholder="Escribe aquí..."></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <div class="comments">
+            <h2>Comentarios</h2>
+            <div id="commentsContainer"></div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const commentsContainer = document.getElementById('commentsContainer');
+            const storedComments = JSON.parse(localStorage.getItem('userComments')) || [];
+
+            function renderComments() {
+                commentsContainer.innerHTML = '';
+                storedComments.forEach((comment, index) => {
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    
+                    const commentText = document.createElement('span');
+                    commentText.textContent = comment.text;
+                    
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.className = 'delete-btn';
+                    deleteBtn.textContent = 'Eliminar';
+                    deleteBtn.addEventListener('click', () => {
+                        // Eliminar el comentario de localStorage
+                        storedComments.splice(index, 1);
+                        localStorage.setItem('userComments', JSON.stringify(storedComments));
+                        renderComments(); // Vuelve a renderizar los comentarios
+                    });
+                    
+                    commentDiv.appendChild(commentText);
+                    commentDiv.appendChild(deleteBtn);
+                    commentsContainer.appendChild(commentDiv);
+                });
+            }
+
+            renderComments();
+
+            document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+
+                const feedback = document.getElementById('feedback').value.trim();
+
+                if (feedback === '') {
+                    alert('Por favor, escribe tu queja, sugerencia o petición antes de enviar.');
+                    return;
+                }
+
+                // Guardar el comentario en localStorage
+                storedComments.push({ text: feedback });
+                localStorage.setItem('userComments', JSON.stringify(storedComments));
+
+                // Mostrar el nuevo comentario en la página
+                renderComments();
+
+                // Limpiar el formulario
+                document.getElementById('feedback').value = '';
+            });
+        });
+    </script>
+</body>
+</html>

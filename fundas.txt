@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundas - NANDOTECH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+        .product-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fundas</h1>
+    </header>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x200?text=Funda+1" alt="Funda 1">
+            <h3>Funda 1</h3>
+            <p>$15.00</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x200?text=Funda+2" alt="Funda 2">
+            <h3>Funda 2</h3>
+            <p>$18.00</p>
+        </div>
+        <!-- Agrega más productos aquí -->
+    </div>
+</body>
+</html>
